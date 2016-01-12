@@ -1,6 +1,6 @@
 #:before:account_payment_gateway/account_payment_gateway:section:pasarelas_pagos#
 
-.. inheritref:: account_payment_gateway_sale/account_payment_gateway_sale:section:pagos_relacionado_ventas
+.. inheritref:: account_payment_gateway_invoice/account_payment_gateway_invoice:section:pagos_relacionado_ventas
 
 -------------------------------
 Pagos relacionados con facturas
