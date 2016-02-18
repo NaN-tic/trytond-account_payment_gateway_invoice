@@ -31,3 +31,8 @@ class Invoice:
                     if transaction.origin == invoice:
                         result[name][invoice.id] += transaction.amount
         return result
+
+    @classmethod
+    def workflow_to_posted(cls, invoices):
+        cls.validate_invoice(invoices)
+        cls.post(invoices)
