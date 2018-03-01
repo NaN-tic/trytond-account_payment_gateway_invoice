@@ -11,7 +11,7 @@ __all__ = ['Invoice']
 class Invoice:
     __metaclass__ = PoolMeta
     __name__ = 'account.invoice'
-    gateway_amount = fields.Function(fields.Numeric("Gateway Amount"), 
+    gateway_amount = fields.Function(fields.Numeric("Gateway Amount"),
         "get_gateway_amount")
 
     @classmethod

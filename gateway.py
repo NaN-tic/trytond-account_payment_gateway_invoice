@@ -43,7 +43,7 @@ class AccountPaymentGatewayTransaction:
                     self.gateway.writeoff_amount_percent)
                 [setattr(pay_invoice.ask, f, v)
                     for f, v in pay_invoice.default_ask(None)
-                        .iteritems()]
+                    .iteritems()]
 
                 if (min_percent_writeoff < self.amount <
                         max_percent_writeoff

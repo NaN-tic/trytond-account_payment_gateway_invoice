@@ -2,11 +2,12 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.pool import Pool
-from .gateway import *
-from .invoice import *
+from . import gateway
+from . import invoice
+
 
 def register():
     Pool.register(
-        AccountPaymentGatewayTransaction,
-        Invoice,
+        gateway.AccountPaymentGatewayTransaction,
+        invoice.Invoice,
         module='account_payment_gateway_invoice', type_='model')
