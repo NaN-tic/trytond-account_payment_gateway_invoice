@@ -2,9 +2,7 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.pool import Pool, PoolMeta
-
 from trytond.transaction import Transaction
-
 
 __all__ = ['AccountPaymentGatewayTransaction']
 
@@ -29,8 +27,6 @@ class AccountPaymentGatewayTransaction(metaclass=PoolMeta):
             session_id, _, _ = PayInvoice.create()
             pay_invoice = PayInvoice(session_id)
             pay_invoice.start.currency = self.currency
-            pay_invoice.start.currency_digits = (self
-                .currency_digits)
             pay_invoice.start.description = self.description
             pay_invoice.start.journal = self.gateway.journal
             pay_invoice.start.date = self.date
